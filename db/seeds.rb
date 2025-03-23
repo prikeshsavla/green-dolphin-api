@@ -20,9 +20,9 @@ Flag.create({ key: "show_ui", name: "Show UI", description: "Show the UI", defau
 Flag.create({ "name": "Show Contact", "key": "show-contact", description: "Show Contact info", default_value: false })
 
 
-Flag.all.each do |flag|
-  Environment.all.each do |env|
-      EnvironmentFlag.create!({ environment: env, flag: flag })
-  end
-end
+# Flag.all.each do |flag|
+#   Environment.all.each do |env|
+#       EnvironmentFlag.create!({ environment: env, flag: flag })
+#   end
+# end
 puts EnvironmentFlag.count
