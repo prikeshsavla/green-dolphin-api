@@ -76,7 +76,9 @@ This Rails application leverages Action Cable for real-time functionality, enabl
 
 ## ToDos
 
-- [ ] Add new flags and save values
+- [x] List flags and env
+- [x] Add new flags
+- [x] Update flag in environment
 - [ ] Add flag preview page
 - [ ] on flag change notify on cable
 - [ ] on flag change show live update - UI app

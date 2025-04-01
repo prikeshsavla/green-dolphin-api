@@ -1,8 +1,8 @@
 class EnvironmentFlagsController < ApplicationController
-  before_action :set_environment_flag, only: %i[ toggle ]
+  before_action :set_environment_flag, only: %i[ update ]
 
-  # PATCH/PUT /flags/1
-  def toggle
+  # PATCH/PUT /environment_flags/1
+  def update
     if @environment_flag.update(environment_flag_params)
       render json: { data: @environment_flag }, include: [ :flag ]
     else
@@ -14,7 +14,7 @@ class EnvironmentFlagsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_environment_flag
-      @environment_flag = EnvironmentFlag.find(params.expect(:environment_flag_id))
+      @environment_flag = EnvironmentFlag.find(params.expect(:id))
     end
 
     # Only allow a list of trusted parameters through.
