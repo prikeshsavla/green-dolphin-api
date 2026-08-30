@@ -14,7 +14,7 @@ class EnvironmentFlagsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_environment_flag
-      @environment_flag = EnvironmentFlag.find(params.expect(:id))
+      @environment_flag = EnvironmentFlag.find_by(flag_id: params[:flag_id], environment_id: params[:environment_id])
     end
 
     # Only allow a list of trusted parameters through.
